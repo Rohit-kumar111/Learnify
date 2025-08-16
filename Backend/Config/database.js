@@ -5,7 +5,7 @@ const connecting=()=>{ mongoose.connect(process.env.DATABASE_URL).then(()=>{
     console.log("database connected successfully")
 }).catch((err)=>{
     console.log("Database connection failed")
-    console.err(err)
+    console.error(err)
 })
 }
 
