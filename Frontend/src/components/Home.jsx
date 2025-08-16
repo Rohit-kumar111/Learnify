@@ -27,9 +27,7 @@ const Home = () => {
  //LOGOUT HANDLER
   async function  logoutHandler(){
     try {
-               const response = await axios.get(`${BACKEND_URL}/user/logout`,{
-                withCredentials:true
-               })
+               const response = await axios.get(`${BACKEND_URL}/user/logout`)
                toast.success(response.data.message)
                 localStorage.removeItem("user");
                setislogedin(false)
